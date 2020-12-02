@@ -66,8 +66,8 @@
   
     <article id="post-Java之树形数据相关获取总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/01/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/" class="article-date">
-  <time datetime="2020-12-01T02:18:18.000Z" itemprop="datePublished">2020-12-01</time>
+    <a href="/2020/12/02/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-12-02T04:16:28.000Z" itemprop="datePublished">2020-12-02</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/01/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/">Java之树形数据相关获取总结</a>
+      <a class="article-title" href="/2020/12/02/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/">Java之树形数据相关获取总结</a>
     </h1>
   
 
@@ -102,7 +102,65 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/01/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/" data-id="cki7nvxo20000rgt89rp39i8f" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/12/02/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/" data-id="cki7nvxo20000rgt89rp39i8f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java之Linux下安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/01/Java%E4%B9%8BLinux%E4%B8%8B%E5%AE%89%E8%A3%85/" class="article-date">
+  <time datetime="2020-12-01T02:18:18.000Z" itemprop="datePublished">2020-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/01/Java%E4%B9%8BLinux%E4%B8%8B%E5%AE%89%E8%A3%85/">Java之Linux下安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：</p>
+<p>Centos7.6</p>
+<p>下载linux版Jdk,比如jdk-xxx.tar.gz</p>
+<p>用shell客户端，比如xshell登录到linux终端，用户名用root</p>
+<p>将jdk文件通过ftp软件传到linux下/usr/local/software，比如xftp</p>
+<p>解压jdk文件包,并重命名为jdk</p>
+<p> cd /usr/local/software</p>
+<p> tar -zxvf jdk-xxx.tar.gz</p>
+<p> mv jdk-xxx jdk</p>
+<p>卸载centos原本自带的openjdk，运行命令：rpm -qa | grep java</p>
+<p>然后通过 rpm -e –nodeps 后面跟系统自带的jdk名  这个命令来删除系统自带的jdk，</p>
+<p>例如：rpm -e –nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64</p>
+<p>编辑配置文件，配置环境变量</p>
+<p> vim /etc/profile</p>
+<p>末尾添加如下内容：</p>
+<p>export JAVA_HOME=/usr/local/software/jdk</p>
+<p>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</p>
+<p>export PATH=$PATH:$JAVA_HOME/bin</p>
+<p>设置执行环境变量的配置生效</p>
+<p> source /etc/profile</p>
+<p>查看安装情况</p>
+<p>java -version</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/01/Java%E4%B9%8BLinux%E4%B8%8B%E5%AE%89%E8%A3%85/" data-id="cki7o18km0000gst86oqwggtv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,7 +201,11 @@
       <ul>
         
           <li>
-            <a href="/2020/12/01/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/">Java之树形数据相关获取总结</a>
+            <a href="/2020/12/02/Java%E4%B9%8B%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E8%8E%B7%E5%8F%96%E6%80%BB%E7%BB%93/">Java之树形数据相关获取总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/01/Java%E4%B9%8BLinux%E4%B8%8B%E5%AE%89%E8%A3%85/">Java之Linux下安装</a>
           </li>
         
       </ul>
